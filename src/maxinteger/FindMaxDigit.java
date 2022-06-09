@@ -7,8 +7,8 @@ import java.util.Scanner;
  С клавиатуры вводится натуральное число. Найти его наибольшую цифру.
  Например, введено число 764580. Наибольшая цифра в нем 8.
  **/
-public class FindMaxDigit {
-    public static void findMaxDigitInNumber() {
+public  class FindMaxDigit {
+    public  static void  findMaxDigitInNumber(){
         System.out.println("Введите число, чтоб найти максимальную цифру:");
         Scanner input = new Scanner(System.in);
         String number = input.next();

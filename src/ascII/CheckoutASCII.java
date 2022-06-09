@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Определить, это код английской буквы или какой-либо иной символ.
  **/
 public class CheckoutASCII {
-    public static void checkCharIsUSASCII() {
+    public synchronized static void checkCharIsUSASCII() {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите код символа:");
         int inCode = input.nextInt();
