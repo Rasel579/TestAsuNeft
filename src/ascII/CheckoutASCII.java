@@ -13,12 +13,17 @@ public class CheckoutASCII {
     public synchronized static void checkCharIsUSASCII() {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите код символа:");
-        int inCode = input.nextInt();
-        boolean isASCIIChar = StandardCharsets
-                .US_ASCII
-                .newEncoder()
-                .canEncode((char) inCode);
-        System.out.println(isASCIIChar);
+        try {
+            int inCode = input.nextInt();
+            boolean isASCIIChar = StandardCharsets
+                    .US_ASCII
+                    .newEncoder()
+                    .canEncode((char) inCode);
+            System.out.println(isASCIIChar);
+        } catch (Exception e) {
+            System.out.println("Надо ввести число");
+        }
+
         input.close();
     }
 }
